@@ -8,4 +8,4 @@ This course comprised of a SCRUM-based team project, where the aim was to make a
 
 [Detailed explanation of image processing](./Robot%20logic/Programming%20Logbook.ipynb)
 
-In the folders are avaialable a multitude of folders and files that I contributed to, as well as documentation explaining in further detail the process and methodology used. 
+In the folders are avaialable a multitude of folders and files that I contributed to, as well as documentation explaining in further detail the process and methodology used for the group done by all members.
