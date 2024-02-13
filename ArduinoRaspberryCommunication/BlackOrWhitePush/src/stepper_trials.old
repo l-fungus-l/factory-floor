@@ -1,0 +1,38 @@
+#include <AccelStepper.h>
+
+// Define stepper motor connections and steps per revolution
+#define motorPin1 2
+#define motorPin2 3
+#define motorPin3 4
+#define motorPin4 5
+#define stepsPerRevolution 500
+
+
+// AccelStepper myStepper(AccelStepper::DRIVER);
+
+// Create AccelStepper object
+AccelStepper stepper(AccelStepper::FULL4WIRE, 8, 10, 9, 11);
+
+void setup() {
+  // Set maximum speed and acceleration
+  stepper.setMaxSpeed(1000);
+  stepper.setAcceleration(500);
+}
+
+void loop() {
+  // Move the stepper motor 1 revolution clockwise
+  stepper.moveTo(stepsPerRevolution);
+  while (stepper.distanceToGo() != 0) {
+    stepper.run();
+    // delay(20);
+  }
+  delay(1000);
+
+  // Move the stepper motor 1 revolution counterclockwise
+  stepper.moveTo(-stepsPerRevolution);
+  while (stepper.distanceToGo() != 0) {
+    stepper.run();
+    // delay(20);
+  }
+  delay(1000);
+}
